@@ -136,7 +136,7 @@
 		alpha3 {
 		bindings = <
 		 	 	&kp TAB	&none	&kp Y 	 	&kp F	&none		&kp SLASH	
-		&kp ESC	&none 	&kp X	&kp I		&kp D	&kp B	&none	&RET 
+		&kp ESC	&none 	&kp X	&kp I		&kp D	&kp B	&none	&kp RET
 			 	&none 		&none 			&trans	&trans
 		>;
 		};
