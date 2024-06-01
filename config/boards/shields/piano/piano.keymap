@@ -34,7 +34,7 @@
             timeout-ms = <30>;
             key-positions = <3 4 5>;
             bindings = <&to AL1>;
-            lapers = <SYS>;
+            layers = <SYS>;
         };
         combo_del {
             timeout-ms = <30>;
@@ -56,7 +56,6 @@
     behaviors {
         hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_L";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <250>;
@@ -65,7 +64,6 @@
         };
         hm_r: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_R";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <250>;
@@ -74,7 +72,6 @@
         };
         hl_l: homerow_layers_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERS_L";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick-tap-ms = <250>;
@@ -83,7 +80,6 @@
         };
         hl_r: homerow_layers_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERS_R";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick-tap-ms = <250>;
@@ -92,7 +88,6 @@
         };
         td: tapdance {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAPDANCE";
             #binding-cells = <2>;
             tapping-term-ms = <190>;
             quick-tap-ms = <250>;
@@ -101,13 +96,11 @@
         };
         alpha2macro: behavior_macro_1 {
             compatible = "zmk,behavior-macro";
-            label = "MACRO1";
             #binding-cells = <0>;
             bindings = < &sl AL2 >;
         };
         alpha3macro: behavior_macro_2 {
             compatible = "zmk,behavior-macro";
-            label = "MACRO2";
             #binding-cells = <0>;
             bindings = < &sl AL3 >;
         };
