@@ -39,7 +39,7 @@
         combo_del {
             timeout-ms = <30>;
             key-positions = <0 1 2>;
-            bindings = <&BSPC>;
+            bindings = <&kp BSPC>;
         };
         combo_caps {
             timeout-ms = <30>;
