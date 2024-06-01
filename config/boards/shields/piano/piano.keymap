@@ -17,10 +17,10 @@
 #define AL2 1
 #define AL3 2
 #define SM1 3
-#define SM2 4	
-#define NM1 5	
+#define SM2 4
+#define NM1 5
 #define SYS 6
-#define BT 7	
+#define BT 7
 / { 
     combos {
         compatible = "zmk,combos";
@@ -28,6 +28,18 @@
             timeout-ms = <30>;
             key-positions = <3 4 5>;
             bindings = <&to SYS>;
+            layers = <AL1>;
+        };
+        combo_sys_exit {
+            timeout-ms = <30>;
+            key-positions = <3 4 5>;
+            bindings = <&to AL1>;
+            lapers = <SYS>;
+        };
+        combo_del {
+            timeout-ms = <30>;
+            key-positions = <0 1 2>;
+            bindings = <&BSPC>;
         };
         combo_caps {
             timeout-ms = <30>;
@@ -36,9 +48,9 @@
         };
         combo_bt  {
             timeout-ms = <10>;
-            key-positions = <11 12>;
+            key-positions = <0 1 2>;
             bindings = <&to BT>;
-            layers = <SM1>; 
+            layers = <SYS>; 
         };
     };
     behaviors {
@@ -59,16 +71,6 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
-        sr: shift_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_LAYER";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&to>;
-            retro-tap;
         };
         hl_l: homerow_layers_left {
             compatible = "zmk,behavior-hold-tap";
@@ -119,7 +121,7 @@
 		bindings = <
 		 		&hm_l LGUI COMMA 	&hm_l LALT PERIOD 	&hm_l LCTRL P		&hm_r RCTRL G 	&hm_r RALT C    	&hm_r RGUI R	  
 		&hl_l NM1 A	&hl_l SM2 O	&hl_l SM1 E	&hl_l SYS U 	 	&hl_r SYS H    	&hl_r SM1 T   		&hl_r SM2 N 	&hl_r NM1 S
-			 	 		 	     &alpha2macro &alpha3macro  &kp RET &mt LC(LS(LALT)) SPC
+			 	 		 	     &alpha2macro &alpha3macro  &mt RSHIFT key_repeat &mt LC(LS(LALT)) SPC
 		>;
 		};
 
@@ -134,7 +136,7 @@
 		alpha3 {
 		bindings = <
 		 	 	&kp TAB	&none	&kp Y 	 	&kp F	&none		&kp SLASH	
-		&kp ESC	&none 	&kp X	&kp I		&kp D	&kp B	&none	&none 
+		&kp ESC	&none 	&kp X	&kp I		&kp D	&kp B	&none	&RET 
 			 	&none 		&none 			&trans	&trans
 		>;
 		};
@@ -165,7 +167,7 @@
 
 		sys {
 		bindings = <
-				&kp LC(LS(TAB))	&kp RC(TAB) &kp PG_UP		&kp LS(LC(C)) 	&kp UP 		&kp LS(LC(V))
+				&kp LA(LS(TAB))	&kp RA(TAB) &kp PG_UP		&kp LS(LC(C)) 	&kp UP 		&kp LS(LC(V))
 		&kp C_PREV	&kp C_PP	&kp C_NEXT 	&kp PG_DN		&kp LEFT  		&kp DOWN 	&kp RIGHT 	&kp RET 
 		 			 		 &trans	&trans	&trans &trans
 		>;
