@@ -1,17 +1,14 @@
 if SHIELD_PIANO_LEFT
 
-config ZMK_SPLIT
-	default y
+config ZMK_KEYBOARD_NAME
+	default "The Piano"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
-config ZMK_KEYBOARD_NAME
-	default "The Piano"
-
 endif
 
-if SHIELD_PIANO_RIGHT
+if SHIELD_PIANO_LEFT || SHIELD_PIANO_RIGHT
 
 config ZMK_SPLIT
 	default y
