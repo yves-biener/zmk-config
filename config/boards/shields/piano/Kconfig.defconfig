@@ -1,15 +1,9 @@
-config ZMK_BLE
-	default y
-
-config ZMK_USB
-	default y
-
 if SHIELD_PIANO_LEFT
 
 config ZMK_SPLIT
 	default y
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
+config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
 config ZMK_KEYBOARD_NAME
