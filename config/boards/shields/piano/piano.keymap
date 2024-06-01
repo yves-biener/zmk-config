@@ -162,7 +162,7 @@
 		bindings = <
 		 		&kp PRCNT   	&kp MINUS	&kp EQUAL	    	&kp GRAVE	&kp CARET		&kp BSLH	
 		&kp AMPS	&kp STAR 	&kp HASH	&kp DLLR	 	&kp LBKT	&kp RBKT	 	&kp LPAR 	&kp RPAR
-				  				&EXCL  		&trans		&trans  	&kp QMARK
+				  				&kp EXCL  		&trans		&trans  	&kp QMARK
 		>;
 		};
 		sym2 {
