@@ -133,7 +133,7 @@
 		bindings = <
 		 	 	&kp SINGLE_QUOTE 	&none		&kp Y	 	 	&kp F    	&none		&kp L 	
 		&kp SEMICOLON	&kp Q 		&kp J		&kp K 			&kp M 		&kp W		&kp V	&kp Z 
-			 	 		 	&sk LSHIFT	&sk RSHIFT 		&shiftTriggerSl	&kp RET
+			 	 		 	&sk LSHIFT	&trans 		&shiftTriggerSl	&kp RET
 		>;
 		};
 
@@ -141,7 +141,7 @@
 		bindings = <
 		 	 	&kp TAB	&none	&kp Y 	 	&kp F	&none		&kp SLASH	
 		&kp ESC	&kp TAB	&kp X	&kp I		&kp D	&kp B	&none	&kp RET
-			 	&trans		&trans 			&trans	&kp BSPC
+			 	&trans		&sk LSHIFT 			&shiftTriggerSl	&kp BSPC
 		>;
 		};
 
