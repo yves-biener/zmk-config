@@ -4,13 +4,14 @@
 
 
 &mt {
-    tapping-term-ms = <201>;
+    tapping-term-ms = <200>;
     flavor = "tap-preferred";
- };
+};
 &sk {
-     release-after-ms = <2000>;
-     quick-release;
- };
+    release-after-ms = <2000>;
+    quick-release;
+    lazy;
+};
  
 /* Layers */
 #define AL1 0
@@ -36,14 +37,19 @@
             bindings = <&to AL1>;
             layers = <SYS>;
         };
+        combo_ret {
+            timeout-ms = <30>;
+            key-positions = <10 11 12>;
+            bindings = <&kp RET>;
+        };
         combo_del {
             timeout-ms = <30>;
-            key-positions = <0 1 2>;
+            key-positions = <7 8 9>;
             bindings = <&kp BSPC>;
         };
         combo_caps {
             timeout-ms = <30>;
-            key-positions = <10 11 12>;
+            key-positions = <0 1 2>;
             bindings = <&caps_word>;
         };
         combo_bt  {
@@ -104,6 +110,11 @@
             #binding-cells = <0>;
             bindings = < &sl AL3 >;
         };
+        shiftTriggerSl: behavior_macro_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &sk RSHIFT >;
+        };
     };
 // 				0		1		2					3		4			5
 // 		6		7		8		9 					10		11			12 		13
@@ -120,17 +131,17 @@
 
 		alpha2 {
 		bindings = <
-		 	 	&kp SINGLE_QUOTE 	&none		&none	 	 	&none    	&none		&kp L 	
+		 	 	&kp SINGLE_QUOTE 	&none		&kp Y	 	 	&kp F    	&none		&kp L 	
 		&kp SEMICOLON	&kp Q 		&kp J		&kp K 			&kp M 		&kp W		&kp V	&kp Z 
-			 	 		 	&none	&sk LSHIFT 		&sk RSHIFT	&trans
+			 	 		 	&sk LSHIFT	&sk RSHIFT 		&shiftTriggerSl	&kp RET
 		>;
 		};
 
 		alpha3 {
 		bindings = <
 		 	 	&kp TAB	&none	&kp Y 	 	&kp F	&none		&kp SLASH	
-		&kp ESC	&none 	&kp X	&kp I		&kp D	&kp B	&none	&kp RET
-			 	&none 		&none 			&trans	&trans
+		&kp ESC	&kp TAB	&kp X	&kp I		&kp D	&kp B	&none	&kp RET
+			 	&trans		&trans 			&trans	&kp BSPC
 		>;
 		};
 
