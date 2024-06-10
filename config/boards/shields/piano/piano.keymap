@@ -131,7 +131,7 @@
 
 		alpha2 {
 		bindings = <
-		 	 	&hm_l LGUI SINGLE_QUOTE	&hm_l LALT (&none)	&hm_l LCTRL Y		&hm_r RCTRL F  	&hm_r RALT (&none)		&hm_r RGUI L
+		 	 	&hm_l LGUI SINGLE_QUOTE	&hm_l LALT K_CANCEL	&hm_l LCTRL Y		&hm_r RCTRL F  	&hm_r RALT K_CANCEL		&hm_r RGUI L
 		&kp SEMICOLON	&kp Q 		&kp J		&kp K 			&kp M 		&kp W		&kp V	&kp Z 
 			 	 		 	&sk LSHIFT	&trans 		&shiftTriggerSl	&kp SPC
 		>;
@@ -139,7 +139,7 @@
 
 		alpha3 {
 		bindings = <
-		 	 	&hm_l LGUI TAB	&hm_l LALT (&none)	&hm_l LCTRL (&none)	&hm_r RCTRL (&none)	&hm_r RALT (&none)		&hm_r RGUI SLASH
+		 	 	&hm_l LGUI TAB	&hm_l LALT K_CANCEL	&hm_l LCTRL K_CANCEL	&hm_r RCTRL K_CANCEL	&hm_r RALT K_CANCEL		&hm_r RGUI SLASH
 		&kp ESC	&none	&kp X	&kp I		&kp D	&kp B	&none	&kp RET
 			 	&trans		&sk LSHIFT 			&shiftTriggerSl	&kp SPC
 		>;
