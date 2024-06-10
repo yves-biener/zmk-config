@@ -39,12 +39,12 @@
         };
         combo_ret {
             timeout-ms = <30>;
-            key-positions = <10 11 12>;
+            key-positions = <10 11>;
             bindings = <&kp RET>;
         };
         combo_del {
             timeout-ms = <30>;
-            key-positions = <7 8 9>;
+            key-positions = <8 9>;
             bindings = <&kp BSPC>;
         };
         combo_caps {
@@ -123,7 +123,7 @@
         compatible = "zmk,keymap";
 		alpha1 {
 		bindings = <
-		 		&hm_l LGUI COMMA 	&hm_l LALT PERIOD 	&hm_l LCTRL P		&hm_r RCTRL G 	&hm_r RALT C    	&hm_r RGUI R	  
+		 		&hm_l LGUI COMMA 	&hm_l LALT PERIOD 	&hm_l LCTRL P		&hm_r RCTRL G 	&hm_r RALT C    	&hm_r RGUI R
 		&hl_l NM1 A	&hl_l SM2 O	&hl_l SM1 E	&hl_l SYS U 	 	&hl_r SYS H    	&hl_r SM1 T   		&hl_r SM2 N 	&hl_r NM1 S
 			 	 		 	     &alpha2macro &alpha3macro  &key_repeat &mt LC(LS(LALT)) SPC
 		>;
@@ -131,27 +131,28 @@
 
 		alpha2 {
 		bindings = <
-		 	 	&kp SINGLE_QUOTE 	&none		&kp Y	 	 	&kp F    	&none		&kp L 	
+		 	 	&hm_l LGUI SINGLE_QUOTE	&hm_l LALT none	&hm_l LCTRL Y		&hm_r RCTRL F  	&hm_r RALT none		&hm_r RGUI L
 		&kp SEMICOLON	&kp Q 		&kp J		&kp K 			&kp M 		&kp W		&kp V	&kp Z 
-			 	 		 	&sk LSHIFT	&trans 		&shiftTriggerSl	&kp RET
+			 	 		 	&sk LSHIFT	&trans 		&shiftTriggerSl	&kp SPC
 		>;
 		};
 
 		alpha3 {
 		bindings = <
-		 	 	&kp TAB	&none	&kp Y 	 	&kp F	&none		&kp SLASH	
+		 	 	&hm_l LGUI TAB	&hm_l LALT none	&hm_l LCTRL none	&hm_r RCTRL none	&hm_r RALT none		&hm_r RGUI SLASH
 		&kp ESC	&kp TAB	&kp X	&kp I		&kp D	&kp B	&none	&kp RET
-			 	&trans		&sk LSHIFT 			&shiftTriggerSl	&kp BSPC
+			 	&trans		&sk LSHIFT 			&shiftTriggerSl	&kp SPC
 		>;
 		};
 
 		sym1 {
 		bindings = <
-		 		&kp PRCNT   	&kp MINUS	&kp EQUAL	    	&kp GRAVE	&kp CARET		&kp BSLH	
+		 		&hm_l LGUI PRCNT   	&hm_l LALT MINUS	&hm_l LCTRL EQUAL		&hm_r RCTRL GRAVE	&hm_r RALT CARET		&hm_r RGUI BSLH
 		&kp AMPS	&kp STAR 	&kp HASH	&kp DLLR	 	&kp LBKT	&kp RBKT	 	&kp LPAR 	&kp RPAR
 				  				&kp EXCL  		&trans		&trans  	&kp QMARK
 		>;
 		};
+
 		sym2 {
 		bindings = <
 				&kp ATSN	&td LA(RBKT) LA(LS(RBKT))	&td  LA(LBKT) LA(LS(LBKT))	&kp LPRN	&kp RPRN 	&kp SEMI 	
