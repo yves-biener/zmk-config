@@ -14,15 +14,15 @@
 };
  
 /* Layers */
-#define AL1 0
-#define AL2 1
-#define AL3 2
-#define SM1 3
-#define SM2 4
-#define NM1 5
-#define SYS 6
-#define BT 7
-/ { 
+#define AL1  0
+#define AL2  1
+#define AL2U 2
+#define SM1  3
+#define SM2  4
+#define NM1  5
+#define SYS  6
+#define BT   7
+/ {
     combos {
         compatible = "zmk,combos";
         combo_sys {
@@ -39,13 +39,23 @@
         };
         combo_ret {
             timeout-ms = <30>;
-            key-positions = <10 11>;
+            key-positions = <3 4>;
             bindings = <&kp RET>;
         };
         combo_del {
             timeout-ms = <30>;
-            key-positions = <8 9>;
+            key-positions = <4 5>;
             bindings = <&kp BSPC>;
+        };
+        combo_tab {
+            timeout-ms = <30>;
+            key-positions = <1 2>;
+            bindings = <&kp TAB>;
+        };
+        combo_esc {
+            timeout-ms = <30>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
         };
         combo_caps {
             timeout-ms = <30>;
@@ -53,10 +63,16 @@
             bindings = <&caps_word>;
         };
         combo_bt  {
-            timeout-ms = <10>;
+            timeout-ms = <30>;
             key-positions = <0 1 2>;
             bindings = <&to BT>;
             layers = <SYS>; 
+        };
+        combo_bt_exit {
+            timeout-ms = <30>;
+            key-positions = <0 1 2>;
+            bindings = <&to AL1>;
+            layers = <BT>;
         };
     };
     behaviors {
@@ -105,10 +121,10 @@
             #binding-cells = <0>;
             bindings = < &sl AL2 >;
         };
-        alpha3macro: behavior_macro_2 {
+        caps_alpha2macro: behavior_macro_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &sl AL3 >;
+            bindings = < &sl AL2U >;
         };
         shiftTriggerSl: behavior_macro_3 {
             compatible = "zmk,behavior-macro";
@@ -116,32 +132,32 @@
             bindings = < &sk RSHIFT >;
         };
     };
-// 				0		1		2					3		4			5
-// 		6		7		8		9 					10		11			12 		13
-//								14	15 	16 	17		
+//				0		1		2						3		4		5
+//		6		7		8		9						10		11		12		13
+//								14		15		16		17
        keymap {
         compatible = "zmk,keymap";
 		alpha1 {
 		bindings = <
-		 		&hm_l LGUI COMMA 	&hm_l LALT PERIOD 	&hm_l LCTRL P		&hm_r RCTRL G 	&hm_r RALT C    	&hm_r RGUI R
-		&hl_l NM1 A	&hl_l SM2 O	&hl_l SM1 E	&hl_l SYS U 	 	&hl_r SYS H    	&hl_r SM1 T   		&hl_r SM2 N 	&hl_r NM1 S
-			 	 		 	     &alpha2macro &alpha3macro  &key_repeat &mt LC(LS(LALT)) SPC
+		 			&hm_l LGUI X	&hm_l LALT I	&hm_l LCTRL P										&hm_r RCTRL G 	&hm_r RALT C	&hm_r RGUI R
+		&hl_l NM1 A	&hl_l SM2 O		&hl_l SM1 E		&hl_l SYS U											&hl_r SYS H		&hl_r SM1 T		&hl_r SM2 N		&hl_r NM1 S
+			 	 		 							&alpha2macro	&caps_alpha2macro		&key_repeat	&mt LC(LS(LALT)) SPC
 		>;
 		};
 
 		alpha2 {
 		bindings = <
-		 	 	&hm_l LGUI SINGLE_QUOTE	&hm_l LALT K_CANCEL	&hm_l LCTRL Y		&hm_r RCTRL F  	&hm_r RALT K_CANCEL		&hm_r RGUI L
-		&kp SEMICOLON	&kp Q 		&kp J		&kp K 			&kp M 		&kp W		&kp V	&kp Z 
-			 	 		 	&sk LSHIFT	&trans 		&shiftTriggerSl	&kp SPC
+		 	 	&kp COMMA	&kp DOT		&kp Y													&kp F	&kp D	&kp L
+		&kp B	&kp Q		&kp J		&kp K													&kp M	&kp W	&kp V	&kp Z
+			 	 						&kp K_CANCEL	&caps_alpha2macro		&shiftTriggerSl	&kp SPC
 		>;
 		};
 
-		alpha3 {
+		alpha2cap {
 		bindings = <
-		 	 	&hm_l LGUI TAB	&hm_l LALT K_CANCEL	&hm_l LCTRL K_CANCEL	&hm_r RCTRL K_CANCEL	&hm_r RALT K_CANCEL		&hm_r RGUI SLASH
-		&kp ESC	&none	&kp X	&kp I		&kp D	&kp B	&none	&kp RET
-			 	&trans		&sk LSHIFT 			&shiftTriggerSl	&kp SPC
+		 	 		&hm_l LGUI LS(COMMA)	&hm_l LALT LS(DOT)	&hm_l LCTRL LS(Y)										&hm_r RCTRL RS(F)	&hm_r RALT RS(D)	&hm_r RGUI RS(L)
+		&kp LS(B)	&kp LS(Q)				&kp LS(J)			&kp LS(K)												&kp RS(M)			&kp RS(W)			&kp RS(V)		&kp RS(Z)
+			 	 								 				&alpha2macro	&kp K_CANCEL		&shiftTriggerSl		&kp SPC
 		>;
 		};
 
@@ -164,25 +180,25 @@
 
 		num {
 		bindings = <
-				&hm_l LGUI DOT 	&hm_l LALT N0	&hm_l LCTRL N1 		&hm_r RCTRL N2 	&hm_r RALT N3		&hm_r RGUI N4	
-		&kp MINUS	&kp PLUS 	&kp N5		&kp N6			&kp N7		&kp N8			&kp N9   	&kp EQUAL
-							&trans		&trans		&trans			&trans
+					&hm_l LGUI DOT	&hm_l LALT N0	&hm_l LCTRL N1						&hm_r RCTRL N2	&hm_r RALT N3	&hm_r RGUI N4
+		&kp MINUS	&kp PLUS		&kp N5			&kp N6								&kp N7			&kp N8			&kp N9		&kp EQUAL
+													&trans		&trans		&trans		&trans
 		>;
 		};
 
 		sys {
 		bindings = <
-				&kp LA(LS(TAB))	&kp RA(TAB) &kp PG_UP		&kp LS(LC(C)) 	&kp UP 		&kp LS(LC(V))
-		&kp C_PREV	&kp C_PP	&kp C_NEXT 	&kp PG_DN		&kp LEFT  		&kp DOWN 	&kp RIGHT 	&kp RET 
-		 			 		 &trans	&trans	&trans &trans
+				&kp LA(LS(TAB))	&kp RA(TAB)	&kp PG_UP								&kp LS(LC(C))	&kp UP		&kp LS(LC(V))
+		&trans	&trans			&trans		&kp PG_DN								&kp LEFT		&kp DOWN	&kp RIGHT		&kp RET
+		 		 							&kp C_PREV	&kp C_PP		&kp C_PP	&kp C_NEXT
 		>;
 		};
 
 		bt {
 		bindings = <
-				&bt BT_PRV	&bt BT_NXT	&trans 			&trans 	&trans	&trans	
-		&bootloader  	&trans 		&trans 		&trans 			&trans 	&trans 	&trans	&bt BT_CLR
-		 	 	 				&to AL1	&none &none	&none
+					&bt BT_PRV	&bt BT_NXT	&trans								&trans		&trans		&trans
+		&bootloader	&trans		&trans		&trans								&trans		&trans		&trans		&bt BT_CLR
+		 	 	 							&to AL1		&none		&none		&none
 		>;
 		};
 	};
