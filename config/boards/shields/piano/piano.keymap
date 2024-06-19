@@ -134,7 +134,7 @@
 		bindings = <
 		 			&hm_l LGUI X	&hm_l LALT I	&hm_l LCTRL P										&hm_r RCTRL G 	&hm_r RALT C	&hm_r RGUI R
 		&hl_l NM1 A	&hl_l SM2 O		&hl_l SM1 E		&hl_l SYS U											&hl_r SYS H		&hl_r SM1 T		&hl_r SM2 N		&hl_r NM1 S
-			 	 		 							&mo AL2	&key_repeat		&mo RSHIFT	&mt LC(LS(LALT)) SPC
+			 	 		 							&mo AL2	&key_repeat		&kp RSHIFT	&mt LC(LS(LALT)) SPC
 		>;
 		};
 
