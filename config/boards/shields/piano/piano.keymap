@@ -2,18 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-<<<<<<< HEAD
-
-||||||| parent of ce51a59 (feat: dvorak native layout; mod: remove mod-tap from space)
-
-&mt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
-};
- 
-=======
- 
->>>>>>> ce51a59 (feat: dvorak native layout; mod: remove mod-tap from space)
 /* Layers */
 #define AL1  0
 #define AL2  1
@@ -108,19 +96,9 @@
         compatible = "zmk,keymap";
 		alpha1 {
 		bindings = <
-<<<<<<< HEAD
-		 			&hm_l LGUI X	&hm_l LALT I	&hm_l LCTRL P						&hm_r RCTRL G 	&hm_r RALT C	&hm_r RGUI R
-		&hl_l NM1 A	&hl_l SM2 O		&hl_l SM1 E		&hl_l SYS U							&hl_r SYS H		&hl_r SM1 T		&hl_r SM2 N		&hl_r NM1 S
-			 	 		 							&mo AL2	&caps_word		&kp RSHIFT	&kp SPC
-||||||| parent of ce51a59 (feat: dvorak native layout; mod: remove mod-tap from space)
-		 			&hm_l LGUI X	&hm_l LALT I	&hm_l LCTRL P						&hm_r RCTRL G 	&hm_r RALT C	&hm_r RGUI R
-		&hl_l NM1 A	&hl_l SM2 O		&hl_l SM1 E		&hl_l SYS U							&hl_r SYS H		&hl_r SM1 T		&hl_r SM2 N		&hl_r NM1 S
-			 	 		 							&mo AL2	&caps_word		&kp RSHIFT	&mt LC(LS(LALT)) SPC
-=======
 		 			&hm_l LGUI B	&hm_l LALT G	&hm_l LCTRL R						&hm_r RCTRL U 	&hm_r RALT I	&hm_r RGUI O
 		&hl_l NM1 A	&hl_l SM2 S		&hl_l SM1 D		&hl_l SYS F							&hl_r SYS J		&hl_r SM1 K		&hl_r SM2 L		&hl_r NM1 SEMI
 			 	 		 							&mo AL2	&caps_word		&kp RSHIFT	&kp SPC
->>>>>>> ce51a59 (feat: dvorak native layout; mod: remove mod-tap from space)
 		>;
 		};
 
