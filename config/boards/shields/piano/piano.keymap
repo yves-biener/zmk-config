@@ -118,7 +118,7 @@
 			 	 		 							&mo AL2	&caps_word		&kp RSHIFT	&mt LC(LS(LALT)) SPC
 =======
 		 			&hm_l LGUI B	&hm_l LALT G	&hm_l LCTRL R						&hm_r RCTRL U 	&hm_r RALT I	&hm_r RGUI O
-		&hl_l NM1 A	&hl_l SM2 S		&hl_l SM1 D		&hl_l SYS F							&hl_r SYS J		&hl_r SM1 K		&hl_r SM2 N		&hl_r NM1 SEMI
+		&hl_l NM1 A	&hl_l SM2 S		&hl_l SM1 D		&hl_l SYS F							&hl_r SYS J		&hl_r SM1 K		&hl_r SM2 L		&hl_r NM1 SEMI
 			 	 		 							&mo AL2	&caps_word		&kp RSHIFT	&kp SPC
 >>>>>>> ce51a59 (feat: dvorak native layout; mod: remove mod-tap from space)
 		>;
@@ -127,7 +127,7 @@
 		alpha2 {
 		bindings = <
 		 			&hm_l LGUI W	&hm_l LALT E	&hm_l LCTRL T				&hm_r RCTRL Y 	&hm_r RALT H	&hm_r RGUI P
-		&hl_l NM1 B	&hl_l SM2 X		&hl_l SM1 C		&hl_l SYS V					&hl_r SYS M		&hl_r SM1 COMMA	&hl_r SM2 DOT	&hl_r NM1 FSLH
+		&hl_l NM1 N	&hl_l SM2 X		&hl_l SM1 C		&hl_l SYS V					&hl_r SYS M		&hl_r SM1 COMMA	&hl_r SM2 DOT	&hl_r NM1 FSLH
 			 	 									&none	&trans		&trans	&trans
 		>;
 		};
@@ -142,15 +142,15 @@
 
 		sym2 {
 		bindings = <
-		 		&hm_l LGUI Q	&hm_l LALT RS(Q)	&hm_l LCTRL GRAVE				&hm_r RCTRL RS(W)	&hm_r RALT RS(V)	&hm_r RGUI S
-		&trans	&trans			&trans				&kp LBKT						&trans			&trans			&trans		&kp RS(S)
+		 		&hm_l LGUI Q	&hm_l LALT RS(Q)	&hm_l LCTRL GRAVE				&hm_r RCTRL RS(W)	&hm_r RALT RS(E)	&hm_r RGUI Z
+		&trans	&trans			&trans				&kp LBKT						&trans				&trans				&trans		&kp RS(Z)
 			 										&trans	&trans			&trans	&trans
 		>;
 		};
 
 		num {
 		bindings = <
-					&hm_l LGUI V	&hm_l LALT N0	&hm_l LCTRL N1					&hm_r RCTRL N2	&hm_r RALT N3	&hm_r RGUI N4
+					&hm_l LGUI E	&hm_l LALT N0	&hm_l LCTRL N1					&hm_r RCTRL N2	&hm_r RALT N3	&hm_r RGUI N4
 		&kp SQT		&kp RBRC		&kp N5			&kp N6							&kp N7			&kp N8			&kp N9		&kp RBKT
 													&trans		&trans		&trans	&trans
 		>;
