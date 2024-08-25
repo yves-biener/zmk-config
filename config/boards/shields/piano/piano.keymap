@@ -16,6 +16,12 @@
             bindings = <&kp RET>;
             layers = <AL1>;
         };
+        combo_backspace {
+            timeout-ms = <15>;
+            key-positions = <4 5>;
+            bindings = <&kp BSPC>;
+            layers = <AL1>;
+        };
         combo_tab {
             timeout-ms = <30>;
             key-positions = <1 2>;
@@ -80,7 +86,7 @@
 		bindings = <
 		 		&hm_l LGUI W	&hm_l LALT E	&hm_l LCTRL T				&hm_r RCTRL Y 	&hm_r RALT H	&hm_r RGUI P
 		&kp N	&kp X			&kp C			&kp V						&kp M			&kp COMMA		&kp DOT			&kp FSLH
-			 									&none	&trans		&trans	&hl_r NM1 BSPC
+			 									&none	&trans		&trans	&hl_r NM1 SPC
 		>;
 		};
 
