@@ -78,7 +78,7 @@
 		bindings = <
 		 				&hm_l LGUI B	&hm_l LALT G	&hm_l LCTRL R								&hm_r RCTRL U 	&hm_r RALT I	&hm_r RGUI O
 		&hm_l LSHIFT A	&kp S			&kp D			&kp F										&kp J			&kp K			&kp L		&hm_r RSHIFT SEMI
-			 	 		 								&mo AL2		&hl_l SM1 BSPC		&mo SYS		&hl_r NM1 SPC
+			 	 		 								&mo AL2		&kp BSPC		&mo SYS		&hl_r NM1 SPC
 		>;
 		};
 
@@ -86,7 +86,7 @@
 		bindings = <
 		 				&hm_l LGUI W	&hm_l LALT E	&hm_l LCTRL T				&hm_r RCTRL Y 	&hm_r RALT H	&hm_r RGUI P
 		&hm_l LSHIFT N	&kp X			&kp C			&kp V						&kp M			&kp COMMA		&kp DOT			&hm_r RSHIFT FSLH
-			 											&none	&trans		&trans	&trans
+			 											&none	&trans		&mo SM1	&trans
 		>;
 		};
 
@@ -102,7 +102,7 @@
 		bindings = <
 							&hm_l LGUI E	&hm_l LALT N0	&hm_l LCTRL N1					&hm_r RCTRL N2	&hm_r RALT N3	&hm_r RGUI N4
 		&hm_l LSHIFT SQT	&kp RBRC		&kp N5			&kp N6							&kp N7			&kp N8			&kp N9		&hm_r RSHIFT RBKT
-															&trans		&trans		&trans	&none
+															&mo SM1		&trans		&trans	&none
 		>;
 		};
 
@@ -110,7 +110,7 @@
 		bindings = <
 		 				&hm_l LGUI Q	&hm_l LALT RS(Q)	&hm_l LCTRL GRAVE							&hm_r RCTRL EXCL	&hm_r RALT LBRC		&hm_r RGUI RIGHT
 		&hm_l LSHIFT Z	&kp RS(Z)		&kp DOWN			&kp UP										&kp LEFT			&kp RS(SQT)			&kp SQT			&hm_r RSHIFT LBKT
-		 		 											&kp C_PREV		&kp C_NEXT			&none	&kp C_PP
+		 		 											&mo SM1		&kp C_NEXT			&none	&kp C_PP
 		>;
 		};
 	};
