@@ -40,7 +40,7 @@
             key-positions = <8 9 14>;
             bindings = <&sl BLT>;
             layers = <AL1>;
-        }
+        };
     };
     behaviors {
         hm_l: homerow_mods_left {
