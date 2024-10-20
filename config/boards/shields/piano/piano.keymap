@@ -7,6 +7,7 @@
 #define SM1  2
 #define NM1  3
 #define SYS  4
+#define BLT  5
 / {
     combos {
         compatible = "zmk,combos";
@@ -34,6 +35,12 @@
             bindings = <&kp ESC>;
             layers = <AL1>;
         };
+        combo_blt_l {
+            timeout-ms = <30>;
+            key-positions = <8 9 14>;
+            bindings = <&sl BLT>;
+            layers = <AL1>;
+        }
     };
     behaviors {
         hm_l: homerow_mods_left {
@@ -92,9 +99,9 @@
 
 		sym1 {
 		bindings = <
-		 					&hm_l LGUI PRCNT	&hm_l LALT HASH	&hm_l LCTRL DLLR					&hm_r RCTRL RBKT	&hm_r RALT CARET	&hm_r RGUI BSLH
-		&hm_l LSHIFT ATSN	&kp TILDE			&kp AMPS		&kp STAR							&kp MINUS			&kp EQUAL			&kp LPAR		&hm_r RSHIFT RPAR
-				 												&none		&trans			&none	&trans
+		 					&hm_l LGUI PRCNT	&hm_l LALT HASH	&hm_l LCTRL DLLR				&hm_r RCTRL RBKT	&hm_r RALT CARET	&hm_r RGUI BSLH
+		&hm_l LSHIFT ATSN	&kp TILDE			&kp AMPS		&kp STAR						&kp MINUS			&kp EQUAL			&kp LPAR		&hm_r RSHIFT RPAR
+				 												&none		&trans		&none	&trans
 		>;
 		};
 
@@ -108,9 +115,16 @@
 
 		sys {
 		bindings = <
-		 				&hm_l LGUI Q	&hm_l LALT RS(Q)	&hm_l LCTRL GRAVE							&hm_r RCTRL EXCL	&hm_r RALT LBRC		&hm_r RGUI RIGHT
-		&hm_l LSHIFT Z	&kp RS(Z)		&kp DOWN			&kp UP										&kp LEFT			&kp RS(SQT)			&kp SQT			&hm_r RSHIFT LBKT
+		 				&hm_l LGUI Q	&hm_l LALT RS(Q)	&hm_l LCTRL GRAVE						&hm_r RCTRL EXCL	&hm_r RALT LBRC		&hm_r RGUI RIGHT
+		&hm_l LSHIFT Z	&kp RS(Z)		&kp DOWN			&kp UP									&kp LEFT			&kp RS(SQT)			&kp SQT			&hm_r RSHIFT LBKT
 		 		 											&mo SM1		&kp C_NEXT			&none	&kp C_PP
+		>;
+		};
+		blt {
+		bindings = <
+		 		&bt BT_CLR_ALL	&none			&none							&none	&none	&none
+		&none	&none			&bt BT_SEL 0	&bt BT_SEL 1					&none	&none	&none	&none
+		 		 								&none	&none			&none	&none
 		>;
 		};
 	};
