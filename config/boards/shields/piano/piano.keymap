@@ -84,7 +84,7 @@
         compatible = "zmk,keymap";
 		alpha1 {
 		bindings = <
-		 				&hm_l LGUI B	&hm_l LALT G	&hm_l LCTRL R							&hm_r RCTRL U 	&hm_r RALT I	&hm_r RGUI O
+		 				&hm_l LGUI N	&hm_l LALT G	&hm_l LCTRL R							&hm_r RCTRL U 	&hm_r RALT I	&hm_r RGUI O
 		&hm_l LSHIFT A	&kp S			&kp D			&kp F									&kp J			&kp K			&kp L		&hm_r RSHIFT SEMI
 			 	 		 								&mo AL2		&kp BSPC		&mo SYS		&hl_r NM1 SPC
 		>;
@@ -93,7 +93,7 @@
 		alpha2 {
 		bindings = <
 		 				&hm_l LGUI W	&hm_l LALT E	&hm_l LCTRL T				&hm_r RCTRL Y 	&hm_r RALT H	&hm_r RGUI P
-		&hm_l LSHIFT N	&kp X			&kp C			&kp V						&kp M			&kp COMMA		&kp DOT			&hm_r RSHIFT FSLH
+		&hm_l LSHIFT B	&kp X			&kp C			&kp V						&kp M			&kp COMMA		&kp DOT			&hm_r RSHIFT FSLH
 			 											&none	&trans		&mo SM1	&trans
 		>;
 		};
