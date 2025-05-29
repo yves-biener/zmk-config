@@ -21,7 +21,7 @@
         combo_backspace {
             timeout-ms = <30>;
             key-positions = <4 5>;
-            bindings = <&kp DEL>;
+            bindings = <&kp BSPC>;
             layers = <AL1 SM1 NM1 SYS>;
         };
         combo_tab {
@@ -44,6 +44,14 @@
         };
     };
     behaviors {
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+            lazy;
+        };
         hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -84,9 +92,9 @@
         compatible = "zmk,keymap";
 		alpha1 {
 		bindings = <
-		 		&hm_l LGUI N	&hm_l LALT G	&hm_l LCTRL R									&hm_r RCTRL U 	&hm_r RALT I	&hm_r RGUI O
-		&kp A	&kp S			&kp D			&kp F											&kp J			&kp K			&kp L		&kp SEMI
-			 	 		 						&mo AL2		&hm_l LSHIFT BSPC		&mo SYS		&hl_r NM1 SPC
+		 		&hm_l LGUI N	&hm_l LALT G	&hm_l LCTRL R								&hm_r RCTRL U 	&hm_r RALT I	&hm_r RGUI O
+		&kp A	&kp S			&kp D			&kp F										&kp J			&kp K			&kp L		&kp SEMI
+			 	 		 						&mo AL2		&skq LSHIFT		&mo SYS		&hl_r NM1 SPC
 		>;
 		};
 
