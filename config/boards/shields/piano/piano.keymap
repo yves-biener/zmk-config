@@ -21,7 +21,7 @@
         combo_backspace {
             timeout-ms = <30>;
             key-positions = <4 5>;
-            bindings = <&kp BSPC>;
+            bindings = <&kp DEL>;
             layers = <AL1 SM1 NM1 SYS>;
         };
         combo_tab {
@@ -51,6 +51,14 @@
             release-after-ms = <1000>;
             quick-release;
             lazy;
+        };
+        shft: shift_key_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&skq>, <&kp>;
         };
         hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
@@ -94,7 +102,7 @@
 		bindings = <
 		 		&hm_l LGUI N	&hm_l LALT G	&hm_l LCTRL R								&hm_r RCTRL U 	&hm_r RALT I	&hm_r RGUI O
 		&kp A	&kp S			&kp D			&kp F										&kp J			&kp K			&kp L		&kp SEMI
-			 	 		 						&mo AL2		&skq LSHIFT		&mo SYS		&hl_r NM1 SPC
+			 	 		 						&mo AL2		&shft LSHIFT BSPC		&mo SYS		&hl_r NM1 SPC
 		>;
 		};
 
