@@ -24,3 +24,7 @@ include:
     shield: piano_right
   - board: nice_nano_v2
     shield: settings_reset
+  - board: seeeduino_xiao_ble
+    shield: piano_dongle
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
